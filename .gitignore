@@ -1,0 +1,5 @@
+.Rhistory
+*.tmproj
+*.Rcheck
+*.tar.gz
+tsne/man
