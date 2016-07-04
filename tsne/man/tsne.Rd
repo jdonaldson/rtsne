@@ -9,7 +9,9 @@ The t-SNE method for dimensionality reduction
 Provides a simple function interface for specifying t-SNE dimensionality reduction on R matrices or "dist" objects.
 }
 \usage{
-tsne(X, initial_config = NULL, k = 2, initial_dims = 30, perplexity = 30, max_iter = 1000, min_cost = 0, epoch_callback = NULL, whiten = TRUE, epoch=100)
+tsne(X, initial_config = NULL, k = 2, initial_dims = 30, perplexity = 30,
+     max_iter = 1000, min_cost = 0, epoch_callback = NULL, whiten = TRUE,
+     epoch=100)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,7 +25,7 @@ tsne(X, initial_config = NULL, k = 2, initial_dims = 30, perplexity = 30, max_it
 	the dimension of the resulting embedding.
 }
   \item{initial_dims}{
-	The number of dimensions to use in reduction method. 
+	The number of dimensions to use in reduction method.
 }
   \item{perplexity}{
 	Perplexity parameter.  (optimal number of neighbors)
@@ -55,9 +57,9 @@ tsne(X, initial_config = NULL, k = 2, initial_dims = 30, perplexity = 30, max_it
 
 }
 \references{
- L.J.P. van der Maaten and G.E. Hinton. Visualizing High-Dimensional Data Using t-SNE. \emph{Journal of Machine Learning Research} 9 (Nov) : 2579-2605, 2008. 
+ L.J.P. van der Maaten and G.E. Hinton. Visualizing High-Dimensional Data Using t-SNE. \emph{Journal of Machine Learning Research} 9 (Nov) : 2579-2605, 2008.
 
- L.J.P. van der Maaten. Learning a Parametric Embedding by Preserving Local Structure. In \emph{Proceedings of the Twelfth International Conference on Artificial Intelligence and Statistics} (AISTATS), JMLR W&CP 5:384-391, 2009. 
+ L.J.P. van der Maaten. Learning a Parametric Embedding by Preserving Local Structure. In \emph{Proceedings of the Twelfth International Conference on Artificial Intelligence and Statistics} (AISTATS), JMLR W&CP 5:384-391, 2009.
 }
 \author{
 Justin Donaldson (jdonaldson@gmail.com)
