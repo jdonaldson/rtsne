@@ -2,3 +2,4 @@
 *.tmproj
 *.Rcheck
 *.tar.gz
+.Rapp.History

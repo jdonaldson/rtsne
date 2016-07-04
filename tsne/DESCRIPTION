@@ -1,6 +1,6 @@
 Package: tsne
 Type: Package
-Title: T-distributed Stochastic Neighbor Embedding for R (t-SNE)
+Title: T-Distributed Stochastic Neighbor Embedding for R (t-SNE)
 Version: 0.1-3
 Date: 2010-02-19
 Author: Justin Donaldson <jdonaldson@gmail.com>
