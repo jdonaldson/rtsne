@@ -10,5 +10,5 @@ License: GPL
 LazyLoad: yes
 NeedsCompilation: no
 URL: https://github.com/jdonaldson/rtsne/
-BurReports: https://github.com/jdonaldson/rtsne/issues
+BugReports: https://github.com/jdonaldson/rtsne/issues
 Packaged: 2016-07-03 17:44:47 UTC; jdonaldson
