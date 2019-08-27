@@ -60,10 +60,11 @@ function(X, initial_config = NULL, k=2, initial_dims=30, perplexity=30, max_iter
 		if (any(is.nan(num))) message ('NaN in grad. descent')
 		Q[Q < eps] = eps
 		stiffnesses = 4 * (P-Q) * num
+		sum_stiffness = colSums(stiffnesses)
 		for (i in 1:n){
-			grads[i,] = apply(sweep(-ydata, 2, -ydata[i,]) * stiffnesses[,i],2,sum)
+			stiffnesses[i, i] = stiffnesses[i, i] - sum_stiffness[i]
 		}
-
+		grads = -4 * (stiffnesses %*% ydata)
 		gains = ((gains + .2) * abs(sign(grads) != sign(incs)) +
 				 gains * .8 * abs(sign(grads) == sign(incs)))
 
