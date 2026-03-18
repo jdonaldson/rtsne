@@ -17,7 +17,7 @@ function(D, beta){
 
 .x2p <-
 function(X,perplexity = 15,tol = 1e-5){
-	if (class(X) == 'dist') {
+	if (inherits(X, 'dist')) {
 		D = X
 		n = attr(D,'Size')
 	} else{

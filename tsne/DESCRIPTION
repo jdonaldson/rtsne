@@ -1,14 +1,15 @@
 Package: tsne
 Type: Package
 Title: T-Distributed Stochastic Neighbor Embedding for R (t-SNE)
-Version: 0.1-3
-Date: 2016-06-04
-Author: Justin Donaldson <jdonaldson@gmail.com>
-Maintainer: Justin Donaldson <jdonaldson@gmail.com>
+Version: 0.2-0
+Date: 2026-03-18
+Authors@R: person(given = "Justin",
+                  family = "Donaldson",
+                  role = c("aut", "cre"),
+                  email = "jdonaldson@gmail.com")
 Description: A "pure R" implementation of the t-SNE algorithm.
 License: GPL
 LazyLoad: yes
 NeedsCompilation: no
 URL: https://github.com/jdonaldson/rtsne/
 BugReports: https://github.com/jdonaldson/rtsne/issues
-Packaged: 2016-07-03 17:44:47 UTC; jdonaldson
