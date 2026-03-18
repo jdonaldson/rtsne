@@ -70,25 +70,11 @@ function(X,perplexity = 15,tol = 1e-5){
 	r 
 }
 
-.whiten <-
-function(X, row.norm=FALSE, verbose=FALSE, n.comp=ncol(X))
-{  
-	n.comp; # forces an eval/save of n.comp
-	if (verbose) message("Centering")
-   n = nrow(X)
-	p = ncol(X)
-	X <- scale(X, scale = FALSE)
-   X <- if (row.norm) 
-       t(scale(X, scale = row.norm))
-   else t(X)
-
-   if (verbose) message("Whitening")
-   V <- X %*% t(X)/n
-   s <- La.svd(V)
-   D <- diag(c(1/sqrt(s$d)))
-   K <- D %*% t(s$u)
-   K <- matrix(K[1:n.comp, ], n.comp, p)
-   X = t(K %*% X)
-	X
+.pca <-
+function(X, n.comp=ncol(X))
+{
+	X = scale(X, scale = FALSE)
+	e = eigen(t(X) %*% X)
+	X %*% Re(e$vectors[, 1:n.comp])
 }
 

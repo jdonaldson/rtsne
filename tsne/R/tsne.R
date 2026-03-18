@@ -8,13 +8,13 @@ function(X, initial_config = NULL, k=2, initial_dims=30, perplexity=30, max_iter
 		X = X - min(X)
 		X = X/max(X)
 		initial_dims = min(initial_dims,ncol(X))
-		if (whiten) X<-.whiten(as.matrix(X),n.comp=initial_dims)
+		if (whiten) X<-.pca(as.matrix(X),n.comp=initial_dims)
 		n = nrow(X)
 	}
 
 	momentum = .5
 	final_momentum = .8
-	mom_switch_iter = 250
+	mom_switch_iter = 20
 
 	epsilon = 500
 	min_gain = .01
